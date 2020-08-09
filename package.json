@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "dependencies": {
+    "puppeteer-core": "^5.1.0"
+  },
+  "devDependencies": {
+    "conventional-changelog": "^3.1.21",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . -c .eslintrc.json --ext js",
+    "fix": "prettier index.js --write",
+    "check_formatted": "prettier **/*.js -c",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  }
+}
