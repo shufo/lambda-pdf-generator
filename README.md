@@ -44,7 +44,7 @@ see `example` for terraform deployment example
 - Generate pdf from HTML
 
 ```bash
-$ echo '{"data": "<html><body><p>Hello World</p></body></html>"}' > payload.json
+$ echo '{"data": "<html><body><p style=\"color: red\">Hello World</p></body></html>"}' > payload.json
 $ aws lambda invoke \
  --function-name lambda-pdf-generator \
  --invocation-type RequestResponse \
@@ -53,6 +53,10 @@ $ aws lambda invoke \
  $ cat response.json | jq -r .data | base64 -d > output.pdf
  $ open output.pdf
 ```
+
+![image](https://user-images.githubusercontent.com/1641039/89736141-3ceddc80-daa2-11ea-8578-5569f670c1cc.png)
+
+The output result is same as `Save as PDF` result on Chrome (Ctrl+P)
 
 ## Fonts
 
