@@ -58,6 +58,22 @@ $ aws lambda invoke \
 
 The output result is same as `Save as PDF` result on Chrome (Ctrl+P)
 
+- Generate PDF from url
+
+```bash
+$ echo '{"url": "https://amazon.com"}' > payload.json
+$ aws lambda invoke \
+ --function-name lambda-pdf-generator \
+ --invocation-type RequestResponse \
+ --payload file://payload.json --cli-binary-format raw-in-base64-out response.json
+
+ $ cat response.json | jq -r .data | base64 -d > output.pdf
+ $ open output.pdf
+```
+
+![image](https://user-images.githubusercontent.com/1641039/89755902-f6d55f00-db1b-11ea-96d3-739d9cbac84c.png)
+
+
 ## Fonts
 
 If you want to use CJK fonts in PDF like Simplified Chinese (简体中文), Traditional Chinese — Taiwan (繁體中文—臺灣), Japanese (日本語), Korean (한국어),
