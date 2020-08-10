@@ -50,8 +50,8 @@ $ aws lambda invoke \
  --invocation-type RequestResponse \
  --payload file://payload.json --cli-binary-format raw-in-base64-out response.json
 
- $ cat response.json | jq -r .data | base64 -d > output.pdf
- $ open output.pdf
+ $ cat response.json | jq -r .data | base64 -d > example.pdf
+ $ open example.pdf
 ```
 
 ![image](https://user-images.githubusercontent.com/1641039/89736141-3ceddc80-daa2-11ea-8578-5569f670c1cc.png)
@@ -67,8 +67,8 @@ $ aws lambda invoke \
  --invocation-type RequestResponse \
  --payload file://payload.json --cli-binary-format raw-in-base64-out response.json
 
- $ cat response.json | jq -r .data | base64 -d > output.pdf
- $ open output.pdf
+ $ cat response.json | jq -r .data | base64 -d > example.pdf
+ $ open example.pdf
 ```
 
 ![image](https://user-images.githubusercontent.com/1641039/89755902-f6d55f00-db1b-11ea-96d3-739d9cbac84c.png)
