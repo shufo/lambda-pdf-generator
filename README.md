@@ -46,7 +46,7 @@ see `example` for terraform deployment example
 ```bash
 $ echo '{"data": "<html><body><p style=\"color: red\">Hello World</p></body></html>"}' > payload.json
 $ aws lambda invoke \
- --function-name lambda-pdf-generator \
+ --function-name <your_deployed_lambda_function_name> \
  --invocation-type RequestResponse \
  --payload file://payload.json --cli-binary-format raw-in-base64-out response.json
 
@@ -63,7 +63,7 @@ The output result is same as `Save as PDF` result on Chrome (Ctrl+P)
 ```bash
 $ echo '{"url": "https://amazon.com"}' > payload.json
 $ aws lambda invoke \
- --function-name lambda-pdf-generator \
+ --function-name <your_deployed_lambda_function_name> \
  --invocation-type RequestResponse \
  --payload file://payload.json --cli-binary-format raw-in-base64-out response.json
 
